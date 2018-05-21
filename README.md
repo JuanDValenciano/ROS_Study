@@ -7,16 +7,58 @@ in this repository, I'm going to upload my personal notes, codes, This is a form
 * [Linux Ubuntu 16.04]
 * [Python 2/3]
 
-
 ## Install Pack "ROS, Gazebo, Turtlebot"
 
+### ROS
 Firt install ROS Follow the steps on the page:
 * http://wiki.ros.org/kinetic/Installation/Ubuntu
+
+### Gazebo.
+
+  `curl -ssL http://get.gazebosim.org | sh`
+
+  `sudo apt-get install libsdformat4`
+
+  `sudo apt-get install libgazebo7`
+
+  `sudo apt-get install ros-kinetic-gazebo-ros`
+
+  `sudo apt-get install ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control`
+
+### Turtlebot
+
+  `sudo apt-get install ros-kinetic-turtlebot`
+
+  `sudo apt-get install ros-kinetic-turtlebot-apps`
+
+  `sudo apt-get install ros-kinetic-turtlebot-interactions`
+
+  `sudo apt-get install ros-kinetic-turtlebot-simulator`
+
+  `sudo apt-get install ros-kinetic-kobuki-ftdi`
+
+  `sudo apt-get install ros-kinetic-ar-track-alvar-msgs`
+
+  `sudo apt-get install python-rosdep python-wstool ros-kinetic-ros`
+
+  `rosdep update`
 
 or ............
 
 follow this video, if you
 https://www.youtube.com/watch?v=36O6OGOJG1E
+
+## Lauch ROS and Gazebo.
+
+First launch
+  `roscore`
+In different tabs
+  Gazebo simulation:
+  `roslaunch turtlebot_gazebo turtlebot_world.launch`
+  Rviz "view sensor"
+  `roslaunch turtlebot_rviz_launchers view_robot.launch`
+  Move robot
+  `roslaunch turtlebot_teleop keyboard_teleop.launch`
 
 ## Author
 
