@@ -53,12 +53,16 @@ https://www.youtube.com/watch?v=36O6OGOJG1E
 First launch
   `roscore`
 In different tabs
+
   Gazebo simulation:
   `roslaunch turtlebot_gazebo turtlebot_world.launch`
+
   Rviz "view sensor"
   `roslaunch turtlebot_rviz_launchers view_robot.launch`
+
   Move robot
   `roslaunch turtlebot_teleop keyboard_teleop.launch`
+  
 
 ## Author
 
