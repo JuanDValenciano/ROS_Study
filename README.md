@@ -48,7 +48,7 @@ or ............
 follow this video, if you
 https://www.youtube.com/watch?v=36O6OGOJG1E
 
-## Lauch ROS and Gazebo.
+## Lauch ROS,Gazebo and Turtlebot .
 
 First launch
   `roscore`
@@ -62,7 +62,84 @@ In different tabs
 
   Move robot
   `roslaunch turtlebot_teleop keyboard_teleop.launch`
-  
+
+## Notas de compilación.
+
+  Tutorials ROS:
+    http://wiki.ros.org/ROS/Tutorials
+
+  Para ver las rutas que se estan ejecutnado.
+  `printenv | grep ROS`
+
+  para crear catkin workspace
+  `mkdir -p ~/catkin_ws/src
+   cd ~/catkin_ws/
+   catkin_make`
+
+   Para ejecutar
+   `source devel/setup.bash`
+
+## Notas uso de ROS
+
+
+  `rosnode info`
+  Se puede ver la informacion del nodo.
+
+  `rostopic -h`
+  despliega un menu de ayuda!
+
+  `rostopic list -v`
+  muestra los topicos con cartacteristicas.
+
+  `rostopic echo [topic]`
+  Muestra los datos que se estan escribiendo
+
+  `rostopic type [topic]`
+  muestra el tipo de mensaje que se esta publicando
+
+    `rosmsg show [Resulta rostopic type]`
+    muestra como es el detalle del mesaje usado.
+
+
+## Config KinectV2
+
+for use Kinect Sensor firt install this package:
+  https://github.com/OpenKinect/libfreenect2#debianubuntu-1404
+
+  https://openkinect.org/wiki/Main_Page
+
+For use with ROS install:
+  https://github.com/code-iai/iai_kinect2#install
+
+My Kinect use this config:
+    device serial: 001038264247
+    device firmware: 4.0.3911.0
+
+### Use KinectV2
+
+Set PATH
+  souurce devel/setup.bash
+
+  roslaunch kinect2_bridge kinect2_bridge.launch reg_metod:=cpu depth_method:=cpu publish_tf:=true fps_limit:=1
+
+  `roslaunch kinect2_bridge kinect2_bridge.launch publish_tf:=true fps_limit:=10`
+
+  `rosrun kinect2_viewer kinect2_viewer kinect2 sd cloud`
+
+
+## Install additional
+
+  https://github.com/OctoMap/octomap/wiki/Compilation-and-Installation-of-OctoMap
+
+
+ Pandas, Install pip
+
+ scatter para graficar.
+
+
+
+
+
 
 ## Author
 
